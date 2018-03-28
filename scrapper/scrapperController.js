@@ -37,7 +37,7 @@ exports.fetchImages = function(req, res) {
 
 	                 cImage.quality(60)                 // set JPEG quality 
 	                     .greyscale() 					// set  black and white filter  
-	                     .write(path.join(__dirname, './images/'+ keyword+count+".jpeg")); 
+	                     .write(path.join(__dirname, './../images/'+ keyword+count+".jpeg")); 
 	                imagePathArr.push( './images/'+ keyword+count+".jpeg");
 	                count++;
 	                }
@@ -54,7 +54,7 @@ exports.fetchImages = function(req, res) {
 				 myData.save()
 				 .then(item => {
 				 	
-				 return res.status(200).send("item saved to database");
+				 return res.status(200).json({msg:"item saved to database"});
 				 })
 				 .catch(err => {
 				 	a("\r\n\n\n\ err ", err)

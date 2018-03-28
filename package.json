@@ -17,6 +17,7 @@
     "underscore": "*",
     "body-parser": "*",
     "mongoose": "*",
-    "async": "*"
+    "async": "*",
+    "cors": "*"
   }
 }
